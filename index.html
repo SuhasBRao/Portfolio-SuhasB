@@ -442,6 +442,30 @@
       animation: blink 1.1s step-end infinite;
     }
 
+    /* AVATAR */
+    .avatar {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      border: 2px solid var(--accent);
+      margin-bottom: 20px;
+      display: block;
+      opacity: 0;
+      animation: fadeUp 0.5s ease 0.08s forwards;
+      filter: grayscale(20%) brightness(0.95);
+      transition: filter 0.3s, border-color 0.3s;
+    }
+
+    .avatar:hover {
+      filter: grayscale(0%) brightness(1);
+    }
+
+    html.light .avatar {
+      filter: grayscale(10%) brightness(1);
+    }
+
     /* TWO COL */
     .two-col {
       display: grid;
@@ -717,6 +741,7 @@
     <!-- HERO -->
     <div class="hero">
       <div>
+        <img src="SuhasBRao.jpeg" alt="Suhas B Rao" class="avatar" />
         <div class="hero-eyebrow">// the portfolio of</div>
         <div class="hero-name">
           <span class="accent-line">Suhas B</span>
